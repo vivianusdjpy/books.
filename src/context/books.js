@@ -39,10 +39,8 @@ function Provider({ children}) {
             title,
         });
 
-        const updatedBooks = [...books, 
-            response.data
-        ];
-           setBooks(updatedBooks);
+        const updatedBooks = [...books, response.data];
+        setBooks(updatedBooks);
     };
 
 const valueToShare = {
@@ -57,7 +55,7 @@ return (
     <BooksContext.Provider value={{valueToShare}}>
         {children}
     </BooksContext.Provider>
-);
+ );
 }
 export {Provider};
 export default BooksContext;
